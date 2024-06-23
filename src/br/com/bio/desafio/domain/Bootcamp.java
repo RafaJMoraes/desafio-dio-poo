@@ -2,6 +2,7 @@ package br.com.bio.desafio.domain;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -12,8 +13,8 @@ public class Bootcamp {
     private static final LocalDate initialDate = LocalDate.now();
 //    private static final LocalDate endDate = initialDate.plusDays(45);
     private static final LocalDate endDate = LocalDate.now().plusDays(45);
-    private Set<Devs> registeredDevs = new HashSet<>();
-    private Set<Content> contents = new HashSet<>();
+    private Set<Devs> registeredDevs = new LinkedHashSet<>();
+    private Set<Content> contents = new LinkedHashSet<>();
 
 
 
@@ -60,5 +61,18 @@ public class Bootcamp {
     @Override
     public int hashCode() {
         return Objects.hash(name, description, registeredDevs, contents);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Bootcamp{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", registeredDevs=" + registeredDevs +
+                ", contents=" + contents +
+                ", initialDate=" + initialDate.toString() +
+                ", endDate=" + endDate.toString() +
+                '}';
     }
 }

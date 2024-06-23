@@ -27,4 +27,11 @@ public abstract class Content {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "Content{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

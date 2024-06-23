@@ -12,7 +12,7 @@ public class Mentoring extends Content {
 
     @Override
     public double calculateXP() {
-        return 0;
+        return XP_DEFAULT + 10;
     }
 
     public LocalDate getWorkload() {
